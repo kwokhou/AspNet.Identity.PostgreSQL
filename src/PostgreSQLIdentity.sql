@@ -13,7 +13,7 @@ CREATE TABLE "AspNetUsers" (
   "Email" character varying(256) DEFAULT NULL::character varying,
   "EmailLowercase" character varying(256) DEFAULT NULL::character varying,
   "EmailConfirmed" boolean NOT NULL DEFAULT false,
-  LockoutEnabled boolean DEFAULT false,
+  "LockoutEnabled" boolean DEFAULT false,
   "LoginAttemps" int DEFAULT 0,
   "LockoutEndDate" timestamp without time zone DEFAULT NULL::timestamp without time zone,
   "PhoneNumber" character varying(256) DEFAULT NULL::character varying,
