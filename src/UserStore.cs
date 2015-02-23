@@ -17,7 +17,10 @@ namespace AspNet.Identity.PostgreSQL
         IUserSecurityStampStore<TUser>,
         IQueryableUserStore<TUser>,
         IUserEmailStore<TUser>,
-        IUserStore<TUser>
+        IUserStore<TUser>,
+        IUserLockoutStore<TUser, string>,
+        IUserPhoneNumberStore<TUser>,
+        IUserTwoFactorStore<TUser, string>
         where TUser : IdentityUser
     {
         private UserTable<TUser> userTable;
@@ -541,6 +544,138 @@ namespace AspNet.Identity.PostgreSQL
 
             return Task.FromResult<TUser>(null);
         }
+
+        #region IUserLockoutStore - account lockout, including access failures and lockout status
+        /// <summary>
+        /// Asynchronously returns the current number of failed access attempts. 
+        /// This number usually will be reset whenever the password is verified or the account is locked out.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task<int> GetAccessFailedCountAsync(TUser user)
+        {
+            return Task.FromResult(user.LoginAttemps);
+        }
+
+        /// <summary>
+        /// Asynchronously returns whether the user can be locked out.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task<bool> GetLockoutEnabledAsync(TUser user)
+        {
+            return Task.FromResult(user.LockoutEnabled);
+        }
+
+        /// <summary>
+        /// Asynchronously returns the DateTimeOffset that represents the end of a user's lockout, 
+        /// any time in the past should be considered not locked out.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task<DateTimeOffset> GetLockoutEndDateAsync(TUser user)
+        {
+            return Task.FromResult(user.LockoutEndDate);
+        }
+
+        /// <summary>
+        /// Used to record when an attempt to access the user has failed.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task<int> IncrementAccessFailedCountAsync(TUser user)
+        {
+            user.LoginAttemps++;
+            userTable.Update(user);
+
+            return Task.FromResult(user.LoginAttemps);
+
+        }
+
+        /// <summary>
+        /// Used to reset the access failed count, typically after the account is successfully accessed.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task ResetAccessFailedCountAsync(TUser user)
+        {
+            user.LoginAttemps = 0;
+            userTable.Update(user);
+
+            return Task.FromResult(0);
+        }
+
+        /// <summary>
+        /// Get the number of failed login already tried
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task SetLockoutEnabledAsync(TUser user, bool enabled)
+        {
+            user.LoginAttemps = 0;
+            userTable.Update(user);
+
+            return Task.FromResult(0);
+        }
+
+        /// <summary>
+        /// Asynchronously locks a user out until the specified end date (set to a past date, to unlock a user).
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Task SetLockoutEndDateAsync(TUser user, DateTimeOffset lockoutEnd)
+        {
+            user.LockoutEndDate = lockoutEnd;
+            userTable.Update(user);
+
+            return Task.FromResult(0);
+        }
+        #endregion
+
+        #region IUserPhoneNumberStore - Defines the members for a user phone number store.
+        public Task<string> GetPhoneNumberAsync(TUser user)
+        {
+            return Task.FromResult(user.PhoneNumber);
+        }
+
+        public Task<bool> GetPhoneNumberConfirmedAsync(TUser user)
+        {
+            return Task.FromResult(user.PhoneNumberConfirmed);
+        }
+
+        public Task SetPhoneNumberAsync(TUser user, string phoneNumber)
+        {
+            user.PhoneNumber = phoneNumber;
+            userTable.Update(user);
+
+            return Task.FromResult(0);
+        }
+
+        public Task SetPhoneNumberConfirmedAsync(TUser user, bool confirmed)
+        {
+            user.PhoneNumberConfirmed = confirmed;
+            userTable.Update(user);
+
+            return Task.FromResult(0);
+        }
+        #endregion
+
+        #region IUserTwoFactorStore - Provides methods used to get or set the two factor authentication for a user.
+
+        public Task<bool> GetTwoFactorEnabledAsync(TUser user)
+        {
+            return Task.FromResult(user.TwoFactorAuthEnabled);
+        }
+
+        public Task SetTwoFactorEnabledAsync(TUser user, bool enabled)
+        {
+            user.TwoFactorAuthEnabled = enabled;
+            userTable.Update(user);
+
+            return Task.FromResult(0);
+        }
+
+        #endregion
 
     }
 }

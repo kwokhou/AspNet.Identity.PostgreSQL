@@ -3,3 +3,8 @@ E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\bin\Release\AspNet.Identity
 E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\obj\Release\AspNet.Identity.PostgreSQL.csprojResolveAssemblyReference.cache
 E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\obj\Release\AspNet.Identity.PostgreSQL.dll
 E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\obj\Release\AspNet.Identity.PostgreSQL.pdb
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Release\AspNet.Identity.PostgreSQL.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Release\AspNet.Identity.PostgreSQL.pdb
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\obj\Release\AspNet.Identity.PostgreSQL.csprojResolveAssemblyReference.cache
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\obj\Release\AspNet.Identity.PostgreSQL.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\obj\Release\AspNet.Identity.PostgreSQL.pdb

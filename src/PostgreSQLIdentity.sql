@@ -13,6 +13,12 @@ CREATE TABLE "AspNetUsers" (
   "Email" character varying(256) DEFAULT NULL::character varying,
   "EmailLowercase" character varying(256) DEFAULT NULL::character varying,
   "EmailConfirmed" boolean NOT NULL DEFAULT false,
+  LockoutEnabled boolean DEFAULT false,
+  "LoginAttemps" int DEFAULT 0,
+  "LockoutEndDate" timestamp without time zone DEFAULT NULL::timestamp without time zone,
+  "PhoneNumber" character varying(256) DEFAULT NULL::character varying,
+  "PhoneNumberConfirmed" boolean NOT NULL DEFAULT false,
+  "TwoFactorAuthEnabled" boolean NOT NULL DEFAULT false,
   PRIMARY KEY ("Id")
 );
 
@@ -57,3 +63,9 @@ ALTER TABLE "AspNetUserRoles"
 ALTER TABLE "AspNetUserRoles"
   ADD CONSTRAINT "FK_AspNetUserRoles_AspNetUsers_UserId" FOREIGN KEY ("UserId") REFERENCES "AspNetUsers" ("Id")
   ON DELETE CASCADE;
+
+  ALTER TABLE "AspNetRoles" OWNER TO angelo;
+  ALTER TABLE "AspNetUserClaims" OWNER TO angelo;
+  ALTER TABLE "AspNetUserLogins" OWNER TO angelo;
+  ALTER TABLE "AspNetUserRoles" OWNER TO angelo;
+  ALTER TABLE "AspNetUsers" OWNER TO angelo;

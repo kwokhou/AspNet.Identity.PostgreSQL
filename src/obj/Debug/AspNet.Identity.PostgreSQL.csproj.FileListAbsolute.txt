@@ -7,3 +7,20 @@ E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\bin\Debug\AspNet.Identity.P
 E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\obj\Debug\AspNet.Identity.PostgreSQL.csprojResolveAssemblyReference.cache
 E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\obj\Debug\AspNet.Identity.PostgreSQL.dll
 E:\Development\GitHub\AspNet.Identity.PostgreSQL\src\obj\Debug\AspNet.Identity.PostgreSQL.pdb
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\AspNet.Identity.PostgreSQL.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\AspNet.Identity.PostgreSQL.pdb
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\obj\Debug\AspNet.Identity.PostgreSQL.csprojResolveAssemblyReference.cache
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\obj\Debug\AspNet.Identity.PostgreSQL.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\obj\Debug\AspNet.Identity.PostgreSQL.pdb
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\Mono.Security.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\Npgsql.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\Npgsql.xml
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\it\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\de\Npgsql.resources.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\es\Npgsql.resources.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\fi\Npgsql.resources.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\fr\Npgsql.resources.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\ja\Npgsql.resources.dll
+C:\Users\Alexi\Documents\Visual Studio 2013\Projects\AspNet.Identity.PostgreSQL\src\bin\Debug\zh-CN\Npgsql.resources.dll
